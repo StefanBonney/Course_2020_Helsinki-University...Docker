@@ -1,0 +1,21 @@
+
+# 1 Build
+
+docker build -t backend .
+
+# 2 Run
+
+docker run -d -p 8000:8000 -v $(pwd)/logs.txt:/mydir/logs.txt backend
+
+# 3 Go with browser to localhost:8000
+# message in browser: Port configured correctly, generated message in logs.txt
+# message in log: 12/24/2020, 5:56:09 PM: Connection received in root
+
+# 4 Stop
+docker stop sad_tu
+
+# 5 start
+docker start sad_tu
+
+# 6 navigate with browser localhost:8000 / refresh
+# message in log: 12/24/2020, 6:10:18 PM: Connection received in root
