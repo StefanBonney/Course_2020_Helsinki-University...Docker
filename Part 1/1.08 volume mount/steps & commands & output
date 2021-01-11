@@ -1,0 +1,7 @@
+1. create the file logs.txt locally
+2. run command:
+
+docker run -v $(pwd)/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+
+3. secret message:
+"Volume bind mount is easy"
