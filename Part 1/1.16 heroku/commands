@@ -1,0 +1,11 @@
+docker pull devopsdockeruh/heroku-example
+
+docker tag devopsdockeruh/heroku-example registry.heroku.com/docker-exercise-1-16/web
+
+docker image push registry.heroku.com/docker-exercise-1-16/web
+
+heroku login
+
+docker image push registry.heroku.com/docker-exercise-1-16/web
+
+heroku container:release web -a docker-exercise-1-16
