@@ -1,0 +1,47 @@
+
+docker build .
+
+docker images
+
+REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
+devopsdockeruh/overwrite_cmd_exercise   latest              3d2b622b1849        14 months ago       908MB
+
+docker tag 3d2b622b1849 docker-clock
+
+docker run docker-clock
+
+-h,       	--help           	to show this message
+-a [age], 	--adult [age]    	to check if you're older than 18
+-c [time],	--clock [time]   	to start a clock
+-t [size],	--triangle [size]	to draw a triangle, takes second argument as the size
+
+docker run docker-clock -a 17
+
+Is not over 18
+
+
+docker run docker-clock -c 
+
+1
+2
+3
+4
+5
+
+docker container ls
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS               NAMES
+a3702c63e086        docker-clock        "/usr/app/start.sh -c"   About a minute ago   Up About a minute                       agitated_morse
+
+docker stop a3702c63e086
+
+docker run docker-clock -t 8
+
+*
+**
+* *
+*  *
+*   *
+*    *
+*     *
+********
