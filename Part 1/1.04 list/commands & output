@@ -1,0 +1,41 @@
+
+COMMANDS
+
+docker images
+
+REPOSITORY                          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu                              16.04               9499db781771        2 weeks ago         131MB
+ubuntu                              xenial              9499db781771        2 weeks ago         131MB
+fav_distro                          xenial              9499db781771        2 weeks ago         131MB
+ubuntu                              latest              f643c72bc252        2 weeks ago         72.9MB
+devopsdockeruh/exec_bash_exercise   latest              c52ece77379e        6 months ago        942MB
+
+
+docker run c52ece77379e 
+
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+
+docker container ls
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+24e756d406f0        c52ece77379e        "docker-entrypoint.s…"   35 seconds ago      Up 33 seconds                           objective_hypatia
+9668d91ae4ab        ubuntu:16.04        "sh -c 'while true; …"   35 minutes ago      Up 35 minutes                           looper
+
+docker exec -it objective_hypatia bash
+
+root@24e756d406f0:/usr/app# tail -f ./logs.txt
+
+Sun, 13 Dec 2020 15:06:40 GMT
+Sun, 13 Dec 2020 15:06:44 GMT
+Sun, 13 Dec 2020 15:06:47 GMT
+Sun, 13 Dec 2020 15:06:50 GMT
+Secret message is:
+"Docker is easy"
+Sun, 13 Dec 2020 1
+
+
+
+SECRET MESSAGE
+
+Docker is easy
