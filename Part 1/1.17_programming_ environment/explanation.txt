@@ -1,4 +1,0 @@
-The programming environment consists of Python 3 development environment and Python Flask development environment.
-
-When entering the container it calls a shell file that lets the user pick which file to test/use inside the container. 
-This enables testing/using  both desktop apps and web apps inside the container, while editing them from the local computer.
