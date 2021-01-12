@@ -1,4 +1,23 @@
 The programming environment consists of Python 3 development environment and Python Flask development environment.
 
 When entering the container it calls a shell file that lets the user pick which file to test/use inside the container. 
-This enables testing/using  both desktop apps and web apps inside the container, while editing them from the local computer.
+This enables testing/using  both desktop apps and web apps inside the container, while editing them from the local computer,
+simply by calling the container.
+
+Run the following commands to build and to have the volumes mounted for the dektop app location (mydir) and webapp location
+(mydir/app)
+
+docker build -t pydevenv .
+docker run -it -v "$(pwd)/app:/mydir/app" -v "$(pwd):/mydir" -p 5000:5000 pydevenv
+
+
+
+
+There is a hello text file to test that it works for running a normal script. To test that it is able to run a web app and a desktop app,
+run container with above command.
+
+when prompted type 1, a web app is now running on port 5000
+
+exit the container, run again
+
+when prompted type 2, type hello.py - hello.py script will run
