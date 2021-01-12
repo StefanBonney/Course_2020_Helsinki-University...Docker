@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo which file to open?
+echo 1 app.py (input 1)
+echo 2 type in the name of the app (input 2)
+
+read num
+
+if [[ $num == "1" ]]; then
+   cd /app
+   open app.py
+else
+   echo type in the name of the app 
+   read name
+   open $name
+fi
